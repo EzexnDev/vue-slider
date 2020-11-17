@@ -30,7 +30,7 @@
 
     <!-- Custom JS Functions -->
 
-    <script src="js/functions.js" charset="utf-8"></script>
+    <script src="js/data.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -47,7 +47,13 @@
                 </div>
                 <div class="col-2 d-flex  justify-content-center align-items-center">
                     <a href="#" @click='moveNext'> <i class="fas fa-arrow-circle-right"></i></a>
-
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center align-items-center">
+                    <select v-model='currentSrcIndex' name="" id="">
+                        <option :value="index-1" v-for = "index in imgSources.length" >{{index}}</option>
+                    </select>
                 </div>
             </div>
         </div>
